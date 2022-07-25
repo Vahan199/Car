@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="{% url 'home' %}"><Button>HOME</Button></a>
+    <h1>{{ car.name }}</h1>
+    <p>{{ car.about }}</p>
+    <img src="{{ car.img.url }}" width="600px" alt="">
+    <h4>{{ car.price }}</h4>
+    <h5>{{ car.year }}</h5>
+{% endblock %}

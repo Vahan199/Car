@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for i in cats %}
+        <a href="{% url 'home_detail' i.id %}"><button>{{ i.name }}</button></a>
+    {% endfor %}
+    <div>
+        <!-- <img src="" width="1920px" alt=""> -->
+    </div>
+{% endblock %}

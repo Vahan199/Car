@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- <div style="display: flex; flex-direction: row;"> -->
+        {% for i in categorys %}
+            {% for j in i.carcategory.all %}
+            <!-- <div style="display: flex; flex-direction: column; margin: 30px; "> -->
+            <h1>{{ j.name }}</h1>
+            <a href="{% url 'home_detail_detail' j.id %}"><img src="{{ j.img.url }}" width="300px" alt=""></a>
+            <h4>{{ j.price }}</h4>
+            <h3>{{ j.year }}</h3>
+            <P>{{j.content}}</P>
+            <p>{{j.time_create}}</p>
+            <p>{{j.time_update}}</p>
+            <!-- </div> -->
+            {% endfor %}
+        {% endfor %}
+    <!-- </div> -->
+
+    <!-- <a href="{% url 'home' %}"><Button>Home</Button></a> -->
+{% endblock %}
